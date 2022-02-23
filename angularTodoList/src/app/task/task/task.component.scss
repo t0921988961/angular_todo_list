@@ -1,0 +1,31 @@
+.card {
+  margin: 5px;
+  font-size: 14pt;
+  line-height: 2em;
+  border: solid 2px #bbb;
+
+  .content {
+    padding: 10px;
+    border-bottom: solid 1px #ccc;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .button {
+    padding-left: 10px;
+    padding-right: 10px;
+    display: flex;
+    justify-content: space-between;
+    button {
+      margin-right: 5px;
+    }
+  }
+
+  .doing {
+    color: green;
+  }
+
+  .finish {
+    color: blue;
+  }
+}

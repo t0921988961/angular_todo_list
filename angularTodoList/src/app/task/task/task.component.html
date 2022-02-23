@@ -1,0 +1,35 @@
+<div class="card">
+  <div class="content">
+    <span>
+      {{ task.subject }}
+      <button
+        type="button"
+        [attr.disabled]="task.state === TaskState.Finish ? 'disabled' : null"
+      >
+        編輯
+      </button>
+    </span>
+
+    <span
+      [class.doing]="task.state === TaskState.Doing"
+      [class.finish]="task.state === TaskState.Finish"
+    >
+      {{ task.state }}
+      {{ TaskState.Doing }}
+    </span>
+  </div>
+
+  <div class="button">
+    <span>
+      <button type="button" (click)="onSetTaskState(TaskState.None)">
+        未完成
+      </button>
+      <button type="button" (click)="onSetTaskState(TaskState.Doing)">
+        進行中
+      </button>
+      <button type="button" (click)="onSetTaskState(TaskState.Finish)">
+        已完成
+      </button>
+    </span>
+  </div>
+</div>
